@@ -1,0 +1,181 @@
+.package-style1 {
+    background-color: $white-color;
+    padding: 45px var(--padding-x, 45px) 60px var(--padding-x, 45px);
+    margin-bottom: 30px;
+    border-radius: 30px;
+    transition: all ease 0.4s;
+
+    .package-body {
+        display: flex;
+        align-items: center;
+        padding: 0 20px 39px 0;
+    }
+
+    .package-icon {
+        margin-right: 20px;
+    }
+
+    .package-title {
+        font-size: 30px;
+        font-weight: 600;
+        text-transform: uppercase;
+        line-height: 1;
+        margin-bottom: 35px;
+        transition: all ease 0.4s;
+    }
+
+    .package-price {
+        font-size: 66px;
+        font-weight: 600;
+        line-height: 1;
+        font-family: $title-font;
+        color: $theme-color;
+        text-transform: uppercase;
+        flex: 1;
+    }
+
+    .currency {
+        font-size: 24px;
+    }
+    
+    .duration {
+        font-size: 30px;
+    }
+
+    .package-label {
+        background-color: $border-color;
+        text-align: center;
+        padding: 5px 0;
+        margin: 0 calc(var(--padding-x, 45px) * -1);
+        transition: all ease 0.4s;
+    }
+
+    .package-list {
+        ul {
+            padding: 35px 0 21px 0;
+            margin: 0;
+            list-style-type: none;
+        }
+
+        li {
+            position: relative;
+            color: $title-color;
+            font-family: $title-font;
+            margin-bottom: 15px;
+            padding-left: 35px;
+            transition: all ease 0.4s;
+        }
+
+        .close {
+            color: $body-color;
+        }
+
+        i {    
+            position: absolute;
+            left: 0;
+            top: 7px;
+            font-size: 1.2em;
+
+            &.fa-times {
+                color: $theme-color;
+            }
+        }
+    }
+
+
+    &:hover,
+    &.active {
+        background-color: $title-color;
+
+        .package-label {
+            background-color: $white-color;
+        }
+
+        .package-title,
+        .package-list li {
+            color: $white-color;
+        }
+
+        .vs-btn {
+            background-color: $white-color;
+            color: $theme-color;
+
+            &:hover {
+                background-color: $theme-color;
+                color: $white-color;
+            }
+        }
+    }
+}
+
+
+@include xl {
+    .package-style1 {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        --padding-x: 20px;
+        border-radius: 15px;
+
+        .package-title {
+            margin-bottom: 20px;
+        }
+
+        .package-list {
+            ul {
+                padding: 20px 0 15px 0;
+            }
+
+            li {
+                padding-left: 30px;
+                margin-bottom: 10px;
+                line-height: 1.5;
+            }
+
+            i {
+                top: 4px;
+            }
+        }
+
+        .package-price {
+            font-size: 60px;
+        }
+
+    }
+}
+
+
+
+@include sm {
+    .package-style1 {
+        .package-body {
+            display: flex;
+            align-items: center;
+            padding: 0 20px 25px 0;
+        }
+
+        .package-title {
+            font-size: 24px;
+        }
+
+        .package-label {
+            font-size: 14px;
+        }
+
+        .package-icon {
+            max-width: 50px;
+            margin-right: 10px;
+        }
+
+        .package-price {
+            font-size: 50px;
+        }
+
+        .duration {
+            font-size: 18px;
+        }
+
+        .currency {
+            font-size: 16px;
+        }
+    }
+}

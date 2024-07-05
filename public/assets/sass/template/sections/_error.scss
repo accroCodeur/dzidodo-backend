@@ -1,0 +1,81 @@
+.error-title {
+  font-size: 50px;
+  text-transform: uppercase;
+  font-weight: 700;
+  border: 3.50px solid $title-color;
+  padding: 15px 0 20px 0;
+  width: 550px;
+  max-width: 100%;
+  margin: -130px auto 17px auto;
+}
+
+.error-text {
+  font-size: 20px;
+  color: $title-color;
+  margin-bottom: 48px;
+}
+
+.error-content {
+  text-align: center;
+
+  .vs-btn {
+    padding: 23px 72px 28px 72px;
+    font-size: 24px;
+    text-transform: capitalize;
+  }
+}
+
+@include xl {
+  .error-text {
+    font-size: 20px;
+    margin-bottom: 25px;
+  }
+
+  .error-title {
+    font-size: 46px;
+    padding: 5px 0 10px 0;
+    width: 550px;
+    margin: -110px auto 20px auto;
+  }
+
+  .error-content .vs-btn {
+    padding: 14px 35px 20px 35px;
+    font-size: 18px;
+  }
+
+}
+
+@include lg {
+  
+}
+
+@include md {
+
+  
+  .error-title {
+    font-size: 36px;
+    padding: 0px 0 7px 0;
+    width: 100%;
+    margin: 20px auto 15px auto;
+}
+  
+}
+
+@include sm {
+  
+  .error-content .vs-btn {
+    padding: 12px 30px 14px 30px;
+    font-size: 16px;
+  }
+
+  .error-text {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+
+  .error-title {
+    font-size: 24px;
+    padding: 5px 5px 6px 5px;
+  }
+
+}

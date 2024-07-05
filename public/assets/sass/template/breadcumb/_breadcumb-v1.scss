@@ -1,0 +1,157 @@
+.breadcumb-menu {
+  max-width: 100%;
+  padding: 0;
+  margin: 34px 0 -0.6em 0;
+  list-style-type: none;
+  position: relative;
+
+  li {
+    display: inline-block;
+    list-style: none;
+    position: relative;
+    padding-right: 23px;
+    margin-right: 16px;
+
+    &:after {
+      content: '';
+      width: 3px;
+      height: 18px;
+      vertical-align: middle;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      margin-top: -8px;
+      background-color: $white-color;
+      display: inline-block;
+    }
+
+    &:last-child {
+      margin-right: 0;
+      padding-right: 0;
+      
+      &:after {
+        display: none;
+      }
+    }
+  }
+
+  li,
+  a,
+  span {
+    word-break: break-word;
+    white-space: normal;
+    text-transform: uppercase;
+    font-size: 28px;
+    font-weight: 600;
+    color: $theme-color;
+    font-family: $title-font;
+    letter-spacing: -0.02em;
+  }
+
+  a:hover {
+    color: $theme-color;
+  }
+}
+
+.breadcumb-title {
+  color: $white-color;
+  margin: -0.3em 0 -0.2em 0;
+  font-size: 90px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.breadcumb-content {
+  padding: 130px 0 130px 0;
+}
+
+.breadcumb-wrapper {
+  overflow: hidden;
+  position: relative;
+  background-size: cover;
+  background-color: $secondary-color;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    background-color: $title-color;
+  }
+}
+
+
+@include xl {
+  .breadcumb-title {
+    font-size: 70px;
+  }
+}
+
+@include ml {
+  .breadcumb-title {
+    font-size: 48px;
+  }
+
+  .breadcumb-menu {
+    margin-top: 15px;
+
+    li,
+    a {
+      font-size: 18px;
+    }
+
+    li {
+      padding-right: 13px;
+      margin-right: 6px;
+
+      &:after {
+        height: 14px;
+        margin-top: -6px;
+      }
+    }
+
+  }
+}
+
+@include lg {
+  .breadcumb-content {
+    padding: 100px 0 100px 0;
+  }
+}
+
+@include md {
+  .breadcumb-content {
+    text-align: center;
+  }
+  
+  .breadcumb-title {
+    font-size: 40px;
+  }
+}
+
+@include sm {  
+  .breadcumb-content {
+    padding: 70px 0 70px 0;
+  }
+
+  .breadcumb-title {
+    font-size: 36px;
+  }
+
+  .breadcumb-menu {
+    a,
+    li {
+      font-size: 14px;
+    }
+
+    li {
+      &:after {
+        height: 12px;
+      }
+    }
+  }
+
+}

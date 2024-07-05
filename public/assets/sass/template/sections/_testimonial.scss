@@ -1,0 +1,114 @@
+.testi-wrap1 {
+    border-radius: 20px;
+}
+
+.testi-style1 {
+    padding: 50px 40px;
+
+    .testi-quote {
+        color: $theme-color;
+        font-size: 60px;  
+        margin-bottom: 25px; 
+    }
+
+    .testi-text {
+        font-size: 32px;
+        line-height: 1.58;
+        margin-bottom: 57px;
+    }
+
+    .testi-author {
+        border-top: 1px solid $body-color;
+        display: flex;
+        align-items: center;
+        padding-top: 45px;
+    }
+
+    .avater {
+        width: 145px;
+        height: 145px;
+        border-radius: 50%;
+        margin-right: 30px;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .auth-name {
+        font-weight: 600;
+        line-height: 1;
+        margin-bottom: 13px;
+    }
+    
+
+    .auth-degi {
+        color: $theme-color;
+        line-height: 1;
+        margin-bottom: 0;
+    }
+
+    .slick-dots {
+        margin: -20px 0 0 0;
+        text-align: right;
+    }
+
+}
+
+@include xl {
+    .testi-style1 {
+        padding: 30px 25px;        
+
+        .testi-text {
+            font-size: 24px;
+            line-height: 1.4;
+            margin-bottom: 40px;
+        }
+
+        .avater {
+            width: 80px;
+            height: 80px;
+            margin-right: 20px;
+        }
+    }
+}
+
+@include sm {
+    .testi-style1 {
+        padding: 30px 15px;
+
+        .testi-quote {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .testi-text {
+            font-size: 16px;
+            line-height: 1.4;
+            margin-bottom: 20px;
+        }
+
+        .testi-author {
+            padding-top: 25px;
+
+            .avater {
+                width: 50px;
+                height: 50px;
+                margin-right: 15px;
+            }
+
+            .auth-name {
+                font-size: 18px;
+                line-height: 1;
+                margin-bottom: 0;
+            }
+            
+            .auth-degi {
+                margin-bottom: 0;
+                line-height: 1;
+                font-size: 14px;
+            }
+        }
+    }
+}

@@ -1,0 +1,223 @@
+.woocommerce-message,
+.woocommerce-info {
+  position: relative;
+  border: 1px solid $border-color;
+  padding: 11px 20px;
+  background-color: $smoke-color;
+  color: $title-color;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  border-radius: 10px;
+
+  a {
+    color: inherit;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &:before {
+    content: '\f06a';
+    font-family: $icon-font;
+    font-weight: 900;
+    margin-right: 10px;
+  }
+}
+
+
+.woocommerce-notices-wrapper {
+  .woocommerce-message {
+    background-color: $secondary-color;
+    color: $white-color;
+    border-color: transparent;
+
+    &:before {
+      content: '\f14a';
+      font-weight: 300;
+    }
+  }
+}
+
+
+.quantity {
+    position: relative;
+    width: max-content;
+    display: inline-flex;
+    align-items: center;
+    background-color: $smoke-color;
+    border-radius: 7px;
+  
+    .screen-reader-text {
+        display: none;
+    }
+    
+    input {
+      padding: 0 5px 0 5px;
+      width: 45px;
+      height: 45px;
+      text-align: center;
+      font-size: 18px;
+      font-weight: 700;
+      --body-color: #{$title-color};
+      background-color: $white-color;
+      border: 2px solid $smoke-color;
+      border-radius: 7px;
+    }
+  
+    .qty-btn {
+      border: none;
+      background-color: transparent;
+      padding: 0;
+      width: 45px;
+      height: 45px;
+      line-height: 45px;
+      color: $title-color;
+      font-size: 16px;
+      border-radius: 7px;
+  
+      &:hover {
+        background-color: $theme-color;  
+        color: $white-color;
+      }
+    }
+    
+    .quantity-plus {
+      bottom: 30px;
+    }
+}
+  
+  
+.star-rating {
+    overflow: hidden;
+    position: relative;
+    width: 93px;
+    height: 1.2em;
+    line-height: 1.2em;
+    display: block;
+    font-family: $icon-font;
+    font-weight: 700;
+    font-size: 14px;
+
+    &:before {
+        content: "\f005\f005\f005\f005\f005";
+        color: $theme-color;
+        float: left;
+        top: 0;
+        left: 0;
+        position: absolute;
+        letter-spacing: 3px;
+        font-weight: 400;
+    }
+
+    span {
+        overflow: hidden;
+        float: left;
+        top: 0;
+        left: 0;
+        position: absolute;
+        padding-top: 1.5em;
+
+        &:before {
+            content: "\f005\f005\f005\f005\f005";
+            top: 0;
+            position: absolute;
+            left: 0;
+            color: $theme-color;
+            letter-spacing: 3px;
+            font-weight: 700;
+        }
+    }
+}
+
+.rating-select { 
+    margin-top: -1em;
+    margin-bottom: 15px;
+
+    label {
+        font-size: 16px;
+        color: $title-color;
+        font-weight: 700;
+        margin: 0 10px 0 0;
+        display: inline-block;   
+    }
+
+    .stars {
+        margin-bottom: 0;
+        line-height: 1;
+        display: inline-block;
+
+        a {
+            position: relative;
+            height: 14px;
+            width: 18px;
+            text-indent: -999em;
+            display: inline-block;
+            text-decoration: none;
+
+            &::before {
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 18px;
+                height: 14px;
+                line-height: 1;
+                font-family: $icon-font;
+                content: "\f005";
+                font-weight: 400;
+                text-indent: 0;
+                color: $theme-color;
+            }
+
+            &:hover {
+                ~ {
+                    a {
+                        &::before {
+                            content: "\f005";
+                            font-weight: 400;
+                        }
+                    }
+                }
+            }
+        }
+
+        &:hover {
+            a {
+                &::before {
+                    content: "\f005";
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+
+    .stars.selected {
+        a.active {
+            &::before {
+                content: "\f005";
+                font-weight: 700;
+            }
+
+            ~ {
+                a {
+                    &::before {
+                        content: "\f005";
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+
+        a {
+            &:not(.active) {
+                &::before {
+                    content: "\f005";
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,12 @@
+.logo{
+    height: 80px !important;
+}
+
+.singer-img{
+  border-top-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+}
+
+.price-style1 .currency{
+    font-size: 15px !important;
+}

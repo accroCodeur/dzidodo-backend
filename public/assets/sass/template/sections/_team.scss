@@ -1,0 +1,138 @@
+.team-style1 {
+    
+    .team-body {
+        background-color: $white-color;
+        margin-bottom: 30px;
+        border-radius: 20px;
+    }
+
+    .team-img {
+        overflow: hidden;
+        border-radius: 20px 20px 0 0;
+
+        img {
+            width: 100%;
+            transition: all ease 0.4s;
+            transform: scale(1) rotate(0);
+        }
+    }
+
+    .team-content {
+        position: relative;
+        text-align: right;
+        padding: 45px 50px 30px 40px;
+    }
+
+    .social,
+    .team-share {
+        position: relative;
+        display: inline-block;
+        width: var(--icon-size, 50px);
+        height: var(--icon-size, 50px);
+        line-height: calc(var(--icon-size, 50px) - 3px);
+        font-size: var(--icon-font-size, 20px);
+        text-align: center;
+        background-color: transparent;
+        color: $white-color;
+        border-radius: 50%;
+        transition: all ease 0.4s;
+        padding: 0;
+        border: 2px solid transparent;
+    }
+
+    .team-share {
+        margin-right: 5px;
+    }
+
+    .team-share {
+        z-index: 1;
+    }
+
+    .social {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(-20px);
+
+        &:hover {
+            color: $title-color;
+            border-color: $title-color;
+        }
+    }
+
+    .team-social {
+        display: flex;
+        align-items: center;
+        width: 235px;
+        padding: 5px;
+        position: absolute;
+        left: 30px;
+        top: calc(var(--icon-size, 50px) / -2);
+        transition: all ease 0.4s;
+        border-radius: 9999px;
+        z-index: 1;
+
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: calc(var(--icon-size, 50px) + 10px);
+            transition: all ease 0.4s;
+            background-color: $theme-color;
+            z-index: -1;
+            border-radius: inherit;
+        }
+
+        &.active {
+            &::before {
+                width: 100%;
+            }
+            
+            .team-share {
+                background-color: $title-color;
+            }
+
+            .social {
+                opacity: 1;
+                visibility: visible;
+                transform: translateX(0);
+            }
+        }
+    }
+    
+    .team-name {
+        line-height: 1;
+        margin-bottom: 4px;
+        text-transform: uppercase;
+    }
+
+    .team-degi {
+        display: block;
+        text-transform: uppercase;
+    }
+
+    &:hover {
+        .team-img {
+            img {
+                transform: scale(1.1) rotate(3deg);
+            }
+        }
+    }
+}
+
+
+@include xl {
+    .team-style1 {
+        --icon-size: 40px;
+        --icon-font-size: 15px;
+
+        .team-content {
+            padding: 25px 25px 20px 25px;
+        }
+
+        .team-social {
+            width: 180px;
+        }        
+    }
+}

@@ -1,0 +1,97 @@
+.form-style1 {
+    .form-group {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        margin: 0;
+        padding: 10px 10px 10px 40px;
+        background-color: rgba(#FFFFFF, 0.10);
+        border-radius: 9999px;
+        max-width: 670px;
+        margin-left: auto;
+    }
+
+    input {
+        flex: 1;
+        border: none;
+        background-color: transparent;
+        font-size: 16px;
+        color: $white-color;
+        padding: 0;
+
+        @include inputPlaceholder {
+            color: $white-color;
+        }
+    }
+}
+
+.form-style2 {
+
+    .form-title {
+        margin-top: -0.3em;
+        margin-bottom: 30px;
+    }
+    
+    .row {
+        --bs-gutter-x: 20px;
+    }
+    
+    select,
+    input {
+        height: 50px;
+        font-size: 14px;
+        margin-bottom: 0;
+    }
+
+    textarea {
+        min-height: 177px;
+    }
+}
+
+@include lg {
+
+    .form-style1 {
+        .form-group {
+            padding: 7px 7px 7px 30px;
+            max-width: 500px;
+        }
+
+        input {
+            font-size: 14px;
+        }       
+    }
+}
+
+@include md {
+    .form-style1 {
+        .form-group {
+            max-width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+
+
+@include sm {
+    .form-style1 {
+        .form-group {
+            display: block;
+        }
+
+        .form-group {
+            background-color: transparent;
+            text-align: center;
+            display: block;
+            padding: 0;
+
+            input {
+                padding: 0 20px;
+                margin-bottom: 20px;
+                border-radius: 10px;
+                background-color: rgba(255, 255, 255, 0.10);
+            }
+        }
+        
+    }
+}

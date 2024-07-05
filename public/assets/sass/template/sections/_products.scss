@@ -1,0 +1,269 @@
+.vs-product-box {
+  margin-bottom: 50px;
+
+  .product-img {
+    overflow: hidden;
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(#051821, 0.70);
+      transition: all ease 0.4s;
+      z-index: 1;
+      transform: scale(0.7);
+      opacity: 0;
+      visibility: hidden;
+    }
+    
+    img {
+      transition: all ease 0.4s;
+      transform: scale(1.001);
+    }
+  }
+
+  .actions {
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all ease 0.4s;
+    z-index: 2;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .vs-btn {
+    background-color: transparent;
+    color: $title-color;
+    text-transform: capitalize;
+    font-size: 14px;
+    font-weight: 600;    
+    padding: 10px 20px;
+
+
+    &:after,
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0.5px;
+      bottom: 0.5px;
+      background-color: $theme-color;
+      z-index: -2;
+      transition: all ease 0.4s;
+      border-radius: 9999px;
+      transform: rotateX(0.0001deg);
+    }
+
+    &:after {
+      z-index: -1;
+      background-color: $white-color;
+      right: 4px;
+      left: 4px;
+    }
+
+    &:hover {
+      background-color: transparent;
+      color: $white-color;
+
+      &:after {
+        transform: rotateX(180deg);
+        background-color: $title-color;
+      }
+    }    
+  }
+
+  
+  .product-content {
+    position: relative;
+    padding-top: 11px;
+  }
+
+  .star-rating {
+    display: block;
+    float: right;
+    position: relative;
+    top: 7px;
+  }
+
+  .product-title {
+    font-size: 24px;
+    margin-bottom: 0;
+  }
+
+  .product-price {
+    font-size: 18px;
+    color: $theme-color;
+    font-weight: 700;
+    color: $theme-color;
+    
+
+    del {
+      margin-right: 5px;
+      color: $body-color;
+    }
+  }
+
+
+  &:hover {
+    .product-img {
+      &:before {
+        opacity: 1;
+        visibility: visible;
+        transform: scale(0.99);
+      }
+    }
+    
+    .actions {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+}
+
+.product-big-img {
+  margin-bottom: 30px;
+
+  .img {
+    background-color: $smoke-color;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+}
+
+.product-about {
+  margin-bottom: 30px;
+  
+  .product-rating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    margin-top: -0.45em;
+  }
+
+  .star-rating {
+    margin-right: 10px;
+  }
+
+  .product-title {
+    margin-bottom: 12px;
+  }
+
+  .price {
+    font-size: 30px;
+    line-height: 1;
+    font-weight: 700;
+    margin-bottom: 22px;
+    color: $theme-color;
+
+    del {
+      font-size: 0.7em;
+      margin-left: 10px;
+      color: $body-color;
+      font-weight: 400;
+    }
+  }
+
+  .actions {
+    margin-top: 30px;
+
+    .quantity {
+      margin-right: 30px;
+    }
+  }
+
+
+  .actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    
+    .vs-btn {    
+      padding: 15px 25px 15px 25px;
+      border-radius: 10px;
+      background-color: $secondary-color;
+
+      &:before {
+        background-color: $theme-color;
+      }
+    }
+  }
+}
+
+
+.product-description {
+  margin-top: 50px;
+}
+
+@include lg {
+  
+  .product-big-img {
+    img {
+      width: 100%;
+    }
+  }
+
+  .product-about {
+    .price {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+  }
+
+  .product-description {
+    margin-top: 10px;
+  }
+
+}
+
+@include sm {
+
+  .vs-product-box {
+    text-align: center;
+    margin-bottom: 20px;
+    
+    .product-title {
+      font-size: 20px;
+      margin-bottom: 5px;
+    }
+
+    .product-price {
+      font-size: 14px;
+      display: block;
+    }
+
+    .star-rating {
+      position: relative;
+      top: 0;
+      float: none;
+      display: inline-block;
+      width: 70px;
+      font-size: 10px;
+      margin-bottom: 4px;
+    }
+
+    .vs-btn {
+      font-size: 12px;
+      padding: 7px 16px 10px 16px;
+    }
+
+  }
+
+  .product-about {
+    .actions {
+      .quantity {
+        margin-right: 10px;
+      }
+    }
+  }
+
+}

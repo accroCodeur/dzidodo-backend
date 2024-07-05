@@ -1,0 +1,19 @@
+[
+    {
+        "id" : 1,
+        "reference": 1452,
+        "name": "Album1",
+        "author_name": "",
+        "description" : "<p class='mb-lg-5 pb-xl-4'>Mon projet est de deux tites</p>",
+        "amount" : 10,
+        "amount_collected" : 5,
+        "image" : "ab-4-1.jpg",
+        "collected_details" : [15,8],
+        "caracteristics" : [
+            {"title": "title1", "text": "text1"},
+            {"title": "title2", "text": "text2"},
+            {"title": "title3", "text": "text3"}
+        ],
+        "sing_list" : ["single1", "signle2", "single3", "single4"]
+    }
+]

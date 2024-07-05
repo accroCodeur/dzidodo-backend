@@ -1,0 +1,369 @@
+.cta-box1 {
+    padding: 40px;
+    border-radius: 10px;
+
+    .box-title {
+        color: $white-color;
+        font-size: 36px;
+        font-weight: 700;
+        margin-top: -0.2em;
+        margin-bottom: 26px;
+    }
+
+    .box-text {
+        color: $white-color;
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+
+    .box-mail,
+    .box-number {
+        font-size: 36px;
+        font-weight: 700;
+        color: $white-color;
+        display: block;
+        width: max-content;
+        max-width: 100%;
+
+        &:hover {
+            color: $theme-color;
+        }
+    }
+
+    .box-mail {
+        font-size: 20px;
+        margin-top: 30px;
+        margin-bottom: 33px;
+    }
+}
+
+.map-v1 {
+    line-height: 0;
+    
+    iframe {
+        width: 100%;
+        height: 470px;
+    }
+}
+
+.hightlight-style1 {
+    margin: calc(var(--extra-gap, 70px) * -1) 0;
+    overflow: hidden;
+    width: 100%;
+
+    .hightlight-inner {
+        position: relative;
+        background-color: $secondary-color;
+        margin: var(--extra-gap, 70px) -5px;
+    }
+
+    .hightlight-row {
+        background-color: $white-color;
+        border-top: 1px dashed $title-color;
+        border-bottom: 1px dashed $title-color;
+        padding: 57px 40px;
+        text-align: center;
+        transform: rotate(-3.42deg);
+    }
+
+    .hightlight-text {
+        // font-size: 50px;
+        font-size: 2.4vw;
+        font-weight: 600;
+        font-family: $title-font;
+        color: $title-color;
+        text-transform: uppercase;
+        display: inline-block;
+        line-height: 1;
+
+        &:nth-child(even) {
+            color: $secondary-color;
+        }
+
+        img {
+            position: relative;
+            top: -6px;
+            margin-left: 0.8vw;
+            margin-right: 0.9vw;
+        }
+
+        &:last-child {
+            img {
+                display: none;
+            }
+        }
+    }
+
+
+    &.layout2 {
+        .hightlight-row {
+            transform: rotate(3.42deg);
+            border: none;
+            background: $secondary-color;
+        }
+
+        .hightlight-inner {
+            background-color: $title-color;
+        }
+
+        .hightlight-text:nth-child(even) {
+            color: $white-color;
+        }
+    }
+}
+
+.countdown-style1 {
+    text-align: center;
+
+    .countdown-title {
+        font-size: 128px;
+        line-height: 1;
+        margin: -0.2em 0 43px 0;
+    }
+
+    .countdown-text {
+        line-height: 1;
+        font-size: 48px;
+        font-weight: 600;
+        margin: 0 0 65px 0;
+    }
+
+    .countdown-area {
+        display: flex;
+        gap: 30px;
+    }
+
+    .countdown-item {
+        padding: 60px 15px 60px 15px;
+        border: 3px dashed $theme-color;
+        border-radius: 40px;
+        text-align: center;
+        flex: 1;
+    }
+
+    .countdown-number {
+        font-size: 128px;
+        line-height: 1;
+        color: $title-color;
+        font-weight: 600;
+        margin: -0.20em 0 7px 0;
+    }
+
+    .countdown-label {
+        display: block;
+        font-size: 36px;
+        font-weight: 600;
+        line-height: 1;
+        margin: 0 0 -0.1em 0;
+    }
+
+    .countdown-note {
+        font-size: 24px;
+        line-height: 1;
+        margin: 65px 0 0 0;
+    }
+
+}
+
+
+
+@include xl {
+    .hightlight-style1 {
+        .hightlight-text {
+            font-size: 2.2vw;
+        }
+    }
+}
+
+@include lg {
+    .countdown-style1 {
+        .countdown-title {
+            font-size: 82px;
+            margin: -0.2em 0 15px 0;
+        }
+
+        .countdown-area {
+            gap: 16px;
+        }
+
+        .countdown-text {
+            font-size: 36px;
+            margin-bottom: 35px;
+        }
+
+        .countdown-number {
+            font-size: 60px;
+            margin-bottom: 3px;
+        }
+
+        .countdown-label {
+            font-size: 26px;
+        }
+
+        .countdown-item {
+            padding: 20px 10px;
+            border-radius: 12px;
+        }
+
+        .countdown-note {
+            margin-top: 25px;
+            font-size: 18px;
+        }        
+    }
+}
+
+@include ml {
+    .hightlight-style1 {
+        .hightlight-text {
+            font-size: 2vw;
+
+            img {
+                top: -2px;
+                margin-left: 0.6vw;
+                margin-right: 0.6vw;
+                width: 3vw;
+            }
+        }
+    }
+
+
+    .cta-box1 {
+        padding: 30px 15px;
+
+        .box-title {
+            font-size: 30px;
+            margin-top: -0.2em;
+            margin-bottom: 10px;
+        }
+
+        .box-text {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .box-mail,
+        .box-number {
+            font-size: 20px;
+        }
+
+        .box-mail {
+            margin: 0 0 20px 0;
+        }
+
+        .vs-btn {
+            padding: 12px 26px;
+            font-size: 14px;
+        }
+    }
+
+}
+
+@include lg {
+    .hightlight-style1 {
+        margin: 0;
+
+        .hightlight-inner {
+            margin: 0;
+            padding: 40px 0;
+        }
+
+        .hightlight-row {
+            padding: 30px 0;
+            transform: rotate(0);
+        }
+
+        .hightlight-text {
+            font-size: 2vw;
+
+            img {
+                top: -2px;
+                margin-left: 0.6vw;
+                margin-right: 0.6vw;
+                width: 3vw;
+            }
+        }
+    }
+
+    
+
+    .countdown-style1 {
+        .countdown-number {
+            font-size: 40px;
+        }
+
+        .countdown-title {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        .countdown-text {
+            font-size: 20px;
+            margin-bottom: 25px;
+        }
+
+        .countdown-label {
+            font-size: 14px;
+        }
+
+        .countdown-note {
+            font-size: 14px;
+        }
+    }
+}
+
+
+@include md {
+    .hightlight-style1 {
+        .hightlight-inner {
+            padding: 15px 0;
+        }
+
+        .hightlight-row {
+            padding: 5px 0;
+        }
+    }
+}
+
+
+@include sm {
+    
+    .map-v1 {        
+        iframe {
+            height: 300px;
+        }
+    }    
+
+    .countdown-style1 {
+        .countdown-number {
+            font-size: 18px;
+        }
+
+        .countdown-title {
+            font-size: 34px;
+            margin-bottom: 13px;
+        }
+        
+        .countdown-text {
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .countdown-label {
+            font-size: 10px;
+        }
+
+        .countdown-area {
+            gap: 8px;
+        }
+
+        .countdown-note {
+            font-size: 10px;
+            margin-top: 15px;
+        }
+
+        .countdown-item {
+            border-width: 1px;
+        }
+    }
+
+}
